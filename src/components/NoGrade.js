@@ -4,11 +4,11 @@ import { HeaderHome } from './Headers';
 
 export function NoGrade() {
     return (
-        <SafeAreaView style={styles.views}>
+        <View style={styles.views}>
           
               <View >
                 <Image 
-                source={require('../.././assets/Pilha-de-papel-2.png')}
+                source={require('../img/icons/Pilha-de-papel-2.png')}
                 style={styles.image}
                 />
               </View>
@@ -22,7 +22,7 @@ export function NoGrade() {
                 </Text>
               </View>
 
-        </SafeAreaView>
+        </View>
   );
 };
     

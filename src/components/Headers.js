@@ -2,11 +2,10 @@ import React from 'react';
 import { Text, Button, StyleSheet, View, Alert, Image, StatusBar, TouchableOpacity, Icon, ScrollView, SafeAreaView } from 'react-native';
 import { Created } from './Created';
 
-export function HeaderHome() {
+export const HeaderHome = props => {
     return (
         
-    <View>
-        <View style={styles.container}>
+        <View >
 
             <StatusBar 
                 backgroundColor={'blue'}
@@ -14,43 +13,44 @@ export function HeaderHome() {
                 />
 
             <View style={styles.teste}>
+                
+                <View>
+                    <Text style={styles.titleText}>        
+                        Notas                 
+                    </Text>
+                </View>
 
-                <Text style={styles.titleText}>        
-                    Notas                 
-                </Text>
-
-                <View></View>
                 <View></View>
                 <View></View>
                 <View></View>
 
-                <TouchableOpacity 
-                    color={'transparent'} 
+                <TouchableOpacity
+                    style={styles.buttonHeader}
                     onPress={() => Alert.alert('New Search')}
+                    //   onPress={() => props.function()}
                     >
-                    <Text style={styles.txtButtonMais}>L</Text>
-                </TouchableOpacity>
+                    <Image
+                        style={styles.image}
+                        source={require("../img/icons/procurar.png")}
+                        tintColor="#FFF"
+                    />
+                </TouchableOpacity> 
 
-                <TouchableOpacity 
-                    color={'transparent'} 
-                    onPress={() => Alert.alert('New Note')}
+                <TouchableOpacity
+                    style={styles.buttonHeader}
+                    onPress={() => props.navigation.navigate("CreateNote")}
+                    //   onPress={() => props.function()}
                     >
-                    <Text style={styles.txtButtonMais}>+</Text>
-                </TouchableOpacity>
+                    <Image
+                        style={styles.image}
+                        source={require("../img/icons/mais.png")}
+                        tintColor="#FFF"
+                    />
+                </TouchableOpacity> 
 
-            </View>
-
-            <View style={styles.buttonMais}>
-            <TouchableOpacity style={styles.buttonStyleTwo}
-                color={'blue'} 
-                onPress={() => Alert.alert('New Note')}
-            >
-                <Text style={styles.txtButtonMais}>+</Text>
-            </TouchableOpacity>
             </View>
         </View>
 
-    </View>
 
 );
 }
@@ -229,24 +229,16 @@ const styles = StyleSheet.create({
 
    teste: {
         flexDirection:'row',
-        paddingTop: 2,
-        paddingHorizontal: 20,
-        height: 60, 
+        backgroundColor: '#0000ff',
+        padding: 40,
+        paddingBottom: 10,
+        //paddingHorizontal: 20,
+        //height: 60, 
         alignItems: 'center',
-        justifyContent: 'space-between',
-        marginLeft: -50,
-        marginRight: -50,
-    },
-
-    buttonMais: {
-        flexDirection:'row',
-        paddingTop: 550,
-        paddingHorizontal: 1,
-        height: 60, 
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        marginLeft: -50,
-        marginRight: -50,
+       justifyContent: 'space-between',
+       // marginTop: 50,
+       // marginRight: 50,
+       
     },
 
     buttonCreate: {
@@ -286,12 +278,26 @@ const styles = StyleSheet.create({
 
     titleText: {
         color: 'white',
-        fontSize: 32,
+        fontSize: 37,
     },
 
     titleTextNoteOpen: {
         color: 'white',
         fontSize: 22,
     },
+
+    image: {
+        marginLeft: 50,
+        marginTop: 5,
+        height: 30,
+        width: 30
+      },
+    
+      buttonHeader: {
+        width: 35,
+        height: 35,
+        marginRight: 20,
+        alignItems: "center",
+      },
 
   });
