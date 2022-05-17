@@ -1,25 +1,28 @@
-import React from 'react';
-import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import Stack from './Stack';
+import React, { useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default () => { 
+import {CreateNote} from '../screens/CreateNote'
+import {EditNote} from '../screens/EditNote'
+import {Home} from '../screens/Home'
+import {HomeNote} from '../screens/HomeNote'
+import {OpenNote} from '../screens/OpenNote'
+
+export default () => {
+
+  const Stack = createNativeStackNavigator();
+
   return (
 
-    <SafeAreaView style={styles.container}>
-        <NavigationContainer>
-        <Stack />
-        </NavigationContainer>
-    </SafeAreaView>
-    
-  );
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="CreateNote">
+        <Stack.Screen
+          name="CreateNote"
+          component={CreateNote}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    //backgroundColor: '#fff',
-    //alignItems: 'center', // horizontal
-    //justifyContent: 'center', //vertical
-  },
-});

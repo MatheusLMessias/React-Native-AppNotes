@@ -1,14 +1,14 @@
-#Mon Mar 28 15:37:32 BRT 2022
-path.4=0/classes.dex
-path.3=4/classes.dex
-path.2=14/classes.dex
+#Tue May 17 16:53:33 BRT 2022
+path.4=4/classes.dex
+path.3=14/classes.dex
+path.2=0/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=/Users/matheusmessias/Desktop/curso-react-native/projeto/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
-base.3=/Users/matheusmessias/Desktop/curso-react-native/projeto/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.2=/Users/matheusmessias/Desktop/curso-react-native/projeto/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.1=/Users/matheusmessias/Desktop/curso-react-native/projeto/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.0=/Users/matheusmessias/Desktop/curso-react-native/projeto/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.4=/Users/macdematheus/Documents/GitHub/React-Native-AppNotes/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.3=/Users/macdematheus/Documents/GitHub/React-Native-AppNotes/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.2=/Users/macdematheus/Documents/GitHub/React-Native-AppNotes/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/Users/macdematheus/Documents/GitHub/React-Native-AppNotes/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
+base.0=/Users/macdematheus/Documents/GitHub/React-Native-AppNotes/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
